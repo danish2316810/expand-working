@@ -13,7 +13,7 @@
             </ComboBox>
            </VBox> 
 
-           <Table id="salesOrderTable" items="{salesOrders>/SalesOrderSet}" inset="true">
+           <Table id="salesOrderTable" items="{salesOrders>/}" inset="true">
                 <headerToolbar>
                     <Toolbar>
                         <Title text="Sales Orders" />
@@ -45,9 +45,9 @@
                     <ColumnListItem>
                         <cells>
                             <Text text="{salesOrders>SalesOrderID}" />
-                            <Text text="{CustomerID}" />
-                            <Text text="{TaxAmount}" />
-                            <Text text="{CustomerName}" />
+                            <Text text="{salesOrders>CustomerID}" />
+                            <Text text="{salesOrders>TaxAmount}" />
+                            <Text text="{salesOrders>CustomerName}" />
                         </cells>
                     </ColumnListItem>
                 </items>

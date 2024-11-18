@@ -11,10 +11,11 @@ function (Controller) {
        
 
         onComboBoxSelectionChange:function(oEvt){
+            var that = this;
           var oItem=oEvt.getParameter("selectedItem").mProperties.key
           var oModel=this.getOwnerComponent().getModel()
 
-          var entity="BusinessPartnerSet('" + oItem + "')/ToSalesOrders"
+          var entity="/BusinessPartnerSet('" + oItem + "')/ToSalesOrders"
 
           oModel.read(entity,{
             success: function (oData) {
